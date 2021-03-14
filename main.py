@@ -1,6 +1,6 @@
 
-# n, B = list(map(int, input().strip().split())) # UNCOMMENT THIS
-n, B = 8, 99887766
+n, B = list(map(int, input().strip().split())) # UNCOMMENT THIS
+#n, B = 5, 11223344
 T = 0
 
 # your code here
@@ -8,6 +8,7 @@ T = 0
 ######################################################## CORE
 
 sum = 0
+tries = 0
 
 for i in (range(0, n)):
 	i += 1
@@ -25,8 +26,9 @@ for i in (range(0, n)):
 ######################################################## PART A 
 
 
-while T != 10000:
+while tries < 10000:
 	T += 1
+	tries += 1
 	if (sum * T) > B:
 		break
 
@@ -35,26 +37,31 @@ while T != 10000:
 
 ######################################################## PART B
 
-"""
-minVal = 0
-maxVal = 10000
-preVal = 0
-tries = 0
-solution = 0
-while tries < 10000 :
-	preVal = T
-	T = (minVal + maxVal) // 2
-	if (sum * T) > B:
-		solution = preVal
-		maxVal = T
-	else:
-		minVal = T
-	tries += 1
-# print(f"The result in {tries} tries is")
-T += 1
-"""
+
+# minVal = 0
+# maxVal = 10000
+# preVal = 0
+# solution = 0
+# while tries < 10000 :
+# 	preVal = T
+# 	T = (minVal + maxVal) // 2
+# 	if (sum * T) > B:
+# 		solution = preVal
+# 		maxVal = T
+# 	else:
+# 		minVal = T
+# 	tries += 1
+# #print(preVal)
+# #print(tries)
+# T += 1
+
 
 ######################################################## END OF PART B
+
+######################################################## T = -1
+
+if tries > 10000:
+   T = -1
 
 
 # please do not modify the input and print statements
