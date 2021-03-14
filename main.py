@@ -26,7 +26,7 @@ for i in (range(0, n)):
 ######################################################## PART A 
 
 
-while tries < 10000:
+while tries <= 10000:
 	T += 1
 	tries += 1
 	if (sum * T) > B:
